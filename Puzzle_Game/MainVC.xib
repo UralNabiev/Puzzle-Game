@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LondrinaSolid-Regular.ttf">
+            <string>LondrinaSolid-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Puzzle_Game" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="jht-e0-8mf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="605-pc-K6I">
+                    <rect key="frame" x="56" y="360.5" width="302.5" height="175"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puzzle Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcA-rw-fRa">
+                            <rect key="frame" x="0.0" y="0.0" width="302.5" height="75"/>
+                            <fontDescription key="fontDescription" name="LondrinaSolid-Regular" family="Londrina Solid" pointSize="63"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bc3-Nz-x9b">
+                            <rect key="frame" x="26" y="100" width="250" height="75"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-bZ-21c">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="75"/>
+                                    <fontDescription key="fontDescription" name="LondrinaSolid-Regular" family="Londrina Solid" pointSize="50"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="start">
+                                        <color key="titleColor" red="0.98823529409999999" green="0.84313725490000002" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="startGameTapped:" destination="-1" eventType="touchUpInside" id="Zii-t6-dUo"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Cbv-bZ-21c" firstAttribute="leading" secondItem="bc3-Nz-x9b" secondAttribute="leading" id="U7Z-T2-CVo"/>
+                                <constraint firstAttribute="bottom" secondItem="Cbv-bZ-21c" secondAttribute="bottom" id="coJ-m1-Jd5"/>
+                                <constraint firstAttribute="width" constant="250" id="eNb-7f-nOg"/>
+                                <constraint firstItem="Cbv-bZ-21c" firstAttribute="top" secondItem="bc3-Nz-x9b" secondAttribute="top" id="ed6-WL-MB0"/>
+                                <constraint firstAttribute="height" constant="75" id="iZ6-Zh-WN6"/>
+                                <constraint firstAttribute="trailing" secondItem="Cbv-bZ-21c" secondAttribute="trailing" id="oII-cS-Grs"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="605-pc-K6I" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="H1O-Pa-ZXy"/>
+                <constraint firstItem="605-pc-K6I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KPu-CH-u0c"/>
+                <constraint firstItem="jht-e0-8mf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SvO-0P-dhP"/>
+                <constraint firstAttribute="bottom" secondItem="jht-e0-8mf" secondAttribute="bottom" id="lki-RH-rqH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jht-e0-8mf" secondAttribute="trailing" id="nmx-Sp-cfc"/>
+                <constraint firstItem="jht-e0-8mf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y6V-Sn-4e6"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackGround" width="2560" height="1600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
